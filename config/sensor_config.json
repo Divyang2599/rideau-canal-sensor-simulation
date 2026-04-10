@@ -1,0 +1,26 @@
+{
+  "locations": {
+    "dows-lake": {
+      "name": "Dow's Lake",
+      "ice_thickness_range": [20, 45],
+      "surface_temp_range": [-15, 2],
+      "snow_accumulation_range": [0, 30],
+      "external_temp_range": [-20, 5]
+    },
+    "fifth-avenue": {
+      "name": "Fifth Avenue",
+      "ice_thickness_range": [18, 42],
+      "surface_temp_range": [-12, 3],
+      "snow_accumulation_range": [0, 25],
+      "external_temp_range": [-18, 4]
+    },
+    "nac": {
+      "name": "NAC",
+      "ice_thickness_range": [22, 48],
+      "surface_temp_range": [-18, 1],
+      "snow_accumulation_range": [0, 35],
+      "external_temp_range": [-22, 3]
+    }
+  },
+  "send_interval_seconds": 10
+}
