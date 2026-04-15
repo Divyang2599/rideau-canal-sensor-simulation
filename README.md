@@ -18,9 +18,9 @@ It pretends to be 3 physical sensors placed at different locations along the can
 ## Technologies Used
 
 - Python 3.x
-- `azure-iot-device` — connects to Azure IoT Hub and sends messages
-- `python-dotenv` — loads connection strings from a `.env` file safely
-- `threading` — runs all 3 sensors at the same time
+- `azure-iot-device` - connects to Azure IoT Hub and sends messages
+- `python-dotenv` - loads connection strings from a `.env` file safely
+- `threading` - runs all 3 sensors at the same time
 
 ---
 
