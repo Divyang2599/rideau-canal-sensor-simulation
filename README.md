@@ -1,7 +1,6 @@
 # Rideau Canal Sensor Simulator
 
 This is the IoT sensor simulator for the Rideau Canal Skateway monitoring project.
-
 It pretends to be 3 physical sensors placed at different locations along the canal and sends fake-but-realistic sensor readings to Azure IoT Hub every 10 seconds.
 
 ---
@@ -61,10 +60,12 @@ cp .env.example .env
 ```
 
 Open `.env` and replace the placeholders with your real device connection strings from Azure IoT Hub:
+
+```
 IOTHUB_DEVICE_CONNECTION_STRING_DOWS_LAKE=HostName=...
 IOTHUB_DEVICE_CONNECTION_STRING_FIFTH_AVE=HostName=...
 IOTHUB_DEVICE_CONNECTION_STRING_NAC=HostName=...
-
+```
 
 To get these strings: Azure Portal → IoT Hub → Devices → click each device → copy Primary Connection String.
 
@@ -83,11 +84,15 @@ python sensor_simulator.py
 ```
 
 You will see output like this:
+
+```
 Rideau Canal Skateway - IoT Sensor Simulator
 Locations: Dow's Lake | Fifth Avenue | NAC
+
 [Dow's Lake] Connecting to IoT Hub...
 [Dow's Lake] Connected. Sending data every 10 seconds.
-[Dow's Lake] Sent: Ice=33.7cm | SurfaceTemp=-6.5°C | Snow=12.1cm | Status=Safe  
+[Dow's Lake] Sent: Ice=33.7cm | SurfaceTemp=-6.5°C | Snow=12.1cm | Status=Safe
+```
 
 Press `Ctrl+C` to stop.
 
@@ -115,7 +120,7 @@ Each message sent to IoT Hub is a JSON object:
 ## Code Structure
 
 | File | Purpose |
-|---|---|
+| :--- | :--- |
 | `sensor_simulator.py` | Main script — connects devices and sends data |
 | `config/sensor_config.json` | Defines value ranges per location and send interval |
 | `requirements.txt` | Python dependencies |
